@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn11.xsd" id="definitions" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="AnimalLicensePrice" name="Animal License Price">
+    <decisionTable id="decisionTable" hitPolicy="COLLECT" aggregation="SUM">
+      <input id="input1" label="Animal">
+        <inputExpression id="inputExpression1" typeRef="string">        <text>Animal</text>
+</inputExpression>
+      </input>
+      <input id="InputClause_0h0q759" label="Age">
+        <inputExpression id="LiteralExpression_1ob7jc3" typeRef="integer">        <text>Age</text>
+</inputExpression>
+      </input>
+      <input id="InputClause_0seb1g2" label="Sterilized">
+        <inputExpression id="LiteralExpression_08ejxi8" typeRef="boolean">        <text>Sterilized</text>
+</inputExpression>
+      </input>
+      <input id="InputClause_0sybzqs" label="Vicious Dog">
+        <inputExpression id="LiteralExpression_1nxib4x" typeRef="boolean">        <text>ViciousDog</text>
+</inputExpression>
+      </input>
+      <output id="output1" label="Total" name="Total" typeRef="double" />
+      <rule id="row-714262424-1">
+        <description></description>
+        <inputEntry id="UnaryTests_1ihak3d">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_19bfihf">        <text><![CDATA[< 6]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_14ubw2r">        <text>false</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0w4qwgu">        <text></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1e9qh6m">        <text>20.00</text>
+</outputEntry>
+      </rule>
+      <rule id="row-714262424-2">
+        <description></description>
+        <inputEntry id="UnaryTests_1d04xvh">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1dbqr3k">        <text><![CDATA[>= 6]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0sgqdbu">        <text>true</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1tdebv9">        <text></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0wlxud4">        <text>20.00</text>
+</outputEntry>
+      </rule>
+      <rule id="row-714262424-3">
+        <description></description>
+        <inputEntry id="UnaryTests_02d8ssi">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1msqu2h">        <text><![CDATA[>= 6]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_13mr354">        <text>false</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0tpxnao">        <text></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1t4idtc">        <text>40.00</text>
+</outputEntry>
+      </rule>
+      <rule id="row-714262424-5">
+        <description></description>
+        <inputEntry id="UnaryTests_1nqv74r">        <text><![CDATA["Dog"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_07nv78k">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1xxxmqb">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_157sf7f">        <text>true</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0sbjpxg">        <text>100.00</text>
+</outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
